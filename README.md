@@ -2,3 +2,11 @@
 
 # boscaiolog
 Harvest Logs in the Forest... I mean Frontend
+
+## How to use it
+
+Simply import via CDN 
+
+```hmtl
+<script src=">
+```
