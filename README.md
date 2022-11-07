@@ -32,19 +32,24 @@ Simply import via CDN
 
 ### Option Object
 
-endpoint => https url to your qryn endpoint
-logFunction => overwrite the default log function with your custom log api, to send data to qryn, simply call the 
+**endpoint** => https url to your qryn endpoint
+
+**logFunction** => overwrite the default log function with your custom log api, to send data to qryn, simply call the 
     .send() function of the bosco object
-idFunction => A function that returns an identifier for this page visit, per default this is a simple UUIDv4 generator
-consoleOverwrite => Set to true, if your want console.log to overwritten with the default or customer 
+    
+**idFunction** => A function that returns an identifier for this page visit, per default this is a simple UUIDv4 generator
+
+**consoleOverwrite** => Set to true, if your want console.log to overwritten with the default or customer 
     logFunction(recommended if you use console.log in your client-side application)
-intervalEnabled => Set to true to execute the intervalFn each IntervalTime
-intervalFn => The function to execute each intervalTime, simply call window.bosco.send() inside to send data
-intervalTime => Time in ms at which the intervalFn should be executed. Required to be at least 800 ms
+    
+**intervalEnabled** => Set to true to execute the intervalFn each IntervalTime
+**intervalFn** => The function to execute each intervalTime, simply call window.bosco.send() inside to send data
+**intervalTime** => Time in ms at which the intervalFn should be executed. Required to be at least 800 ms
 
 ### Function
 
-window.bosco.send(data[, IndexId])
+**window.bosco.send(data[, IndexId])**
 
 => Send data that can be JSON.stringified
+
 => IndexId is an id in addition to your session identifier, it can be used to identify a specific process or part of the client application. (Low Cardinality Recommended)
