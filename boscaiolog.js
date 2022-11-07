@@ -1,6 +1,6 @@
 window.bosco = {
     identifier: "default",
-    endpoint: "https://qryn.endpoint.com/",
+    endpoint: "https://qryn.endpoint.com",
     log: async function (log_content) {
         console.info(log_content) // don't do console.log or you'll create an infinite recursion
         this.send(log_content)
@@ -32,14 +32,14 @@ window.bosco = {
         }
 
         if (!indexed_id) {
-            var res = await fetch(this.endpoint + 'weblogs/_doc/', {
+            var res = await fetch(this.endpoint + "/" + this.label + '/_doc/', {
                 method: "POST",
                 body: JSON.stringify(log_content)
             }).catch((err)=>{
                 console.error(err)
             })
         } else {
-            var res = await fetch(this.endpoint + 'weblogs/_doc/' + indexed_id, {
+            var res = await fetch(this.endpoint + "/" + this.label + '/_doc/' + indexed_id, {
                 method: "PUT",
                 body: JSON.stringify(log_content)
             }).catch((err)=>{
