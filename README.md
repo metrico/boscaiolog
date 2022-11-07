@@ -1,7 +1,7 @@
 <img src="https://user-images.githubusercontent.com/1423657/200393618-3a88e968-44e4-4701-ad14-5a9fd8b427b7.png" width=160>
 
 # boscaiolog
-Harvest Logs in the Forest... I mean Frontend
+> Harvest Logs in the Forest... I mean Frontend
 
 Simply add a script to enable your console.log statements (or custom loggers) to send to any QRYN endpoint you have.
 Making life easier in the process. See the blogpost [here](blog.qryn.dev)
@@ -12,6 +12,8 @@ Simply import via CDN
 
 ```html
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/metrico/boscaiolog@main/boscaiolog.js"></script>
+```
+```html
 <script type="text/javascript>
  window.bosco.init({
     endpoint: "https://qryn.endpoint.com",
