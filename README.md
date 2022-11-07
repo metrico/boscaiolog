@@ -27,6 +27,7 @@ Simply import via CDN
         window.bosco.send(data, [id])
     }
   })
+</script>
 ```
 
 ### Option Object
