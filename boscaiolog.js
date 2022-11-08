@@ -11,8 +11,8 @@ window.bosco = {
         this.endpoint = options?.endpoint || this.endpoint
         this.log = options?.logFunction || this.log
         this.getId = options?.idFunction || this.getId
-        this.label = option.label
-        
+        this.label = options?.label || this.label
+
         this.identifier = this.getId()
 
         if(options.consoleOverwrite) {
