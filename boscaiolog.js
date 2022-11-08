@@ -1,6 +1,7 @@
 window.bosco = {
     identifier: "default",
     v: "0.1.0",
+    label: "weblogs",
     endpoint: "https://qryn.endpoint.com",
     log: async function (log_content) {
         console.info(log_content) // don't do console.log or you'll create an infinite recursion
