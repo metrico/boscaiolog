@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=800px, initial-scale=1.0">
+    <title>Boscaiolog Test</title>
+</head>
+<body>
+    <input type="text" id="url"></input>
+    <button id="start">Send</button>
+</body>
+<script src="./boscaiolog.js"></script>
+<script>
+    window.bosco.init({
+        consoleOverwrite: true,
+    })
+    let button = document.getElementById("start")
+
+    button.addEventListener("click", async function (ev) {
+        let url = document.getElementById("url")
+        window.bosco.endpoint = url.value
+        console.log(window.bosco.endpoint)
+    })
+
+    setInterval(sendALog, 10000)
+
+    function sendALog () {
+        console.log({
+            time: Date.now(),
+            msg: 'Bosco simulator'
+        })
+    }
+</script>
+</html>
