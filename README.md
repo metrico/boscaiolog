@@ -4,7 +4,7 @@
 > Harvest Logs in the Forest... I mean Frontend
 
 Simply add a script to enable your console.log statements (or custom loggers) to send to any QRYN endpoint you have.
-Making life easier in the process. See the blogpost [here](blog.qryn.dev)
+Making life easier in the process. See the blogpost [here](https://blog.qryn.dev/client-logs-from-anywhere)
 
 ## How to use it
 
